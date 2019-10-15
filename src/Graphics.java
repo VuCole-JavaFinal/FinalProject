@@ -1,6 +1,6 @@
 public class Graphics {
 
-    public static void main(String[] args){
+    public static void deathScreen(){
 
         System.out.println(" __    __     _______     __   __");
         System.out.println("|  |  |  |   |   _   |   |  | |  |");
