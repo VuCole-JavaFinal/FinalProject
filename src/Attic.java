@@ -2,14 +2,14 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Attic {
-    public static void Attic(){
+    public static void main(String[] args){
         int choice;
         Scanner input = new Scanner(System.in);
 
         System.out.println("-------------------------------------------------------------");
         //delay the dialog
         try {
-            TimeUnit.SECONDS.sleep(3);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
         }
@@ -22,7 +22,10 @@ public class Attic {
             if (choice == 1) {
                 System.out.println("Window is very thick and difficult to see through, look elsewhere.\n");
                 System.out.println("1.Interact with door");
-                AtticDoor();
+                choice =input.nextInt();
+                if (choice == 1){
+                    AtticDoor();
+                }
         }
             if (choice == 2) {
                 AtticDoor();
@@ -43,21 +46,37 @@ public class Attic {
     public static void AtticDoor(){
         System.out.println("Door is stuck shut  as if it had been glued shut.\n There must be some way you could open it, maybe try looking around a bit.\n");
         System.out.println("1.Look Around \n");
+        int choice;
 
-        boolean invalid = true;
-        while (invalid ==true) {
-            int choice;
-            Scanner input = new Scanner(System.in);
-            choice = input.nextInt();
-            if (choice == 1) {
-                System.out.println("You see some cardboard boxes in the corner, and you notice the heavily stained mattress you woke up on. \n");
-                break;
-            } else {
-                System.out.println("choose again \n");
-                invalid = true;
-            }
-        }
-        System.out.println("1.Interact with boxes \n 2. Interact with");
+        Scanner input = new Scanner(System.in);
+        choice = input.nextInt();
+
+                 if (choice == 1) {
+                     System.out.println("You see some cardboard boxes in the corner, and you notice the heavily stained mattress you woke up on. \n");
+                     System.out.println("1.Interact with boxes \n2.Interact with mattress");
+                     choice = input.nextInt();
+                     while (choice >= 3) {
+                         if (choice == 1) {
+                             boxesInteract();
+                         } else if (choice == 2) {
+                             System.out.println("There's nothing special about the mattress, other than its horrible smell");
+                             System.out.println("1.Interact with boxes");
+                             choice = input.nextInt();
+                             if (choice == 1) {
+                                 boxesInteract();
+                             }
+                         }
+                     }
+                 }
+        System.out.println("choose again");
+
     }
+    public static void boxesInteract(){
+        System.out.println("afa");
+
+
+    }
+
+
 }
 
