@@ -17,7 +17,7 @@ public class Main {
                             System.out.println("spawn in room 4, you get a key after completed a room and move on to the next one.\n" +
                                     "   in order to win the game, you have to have enough 4 keys.\n" +
                                     "                            Begin                           ");
-//                            Attic.Attic();
+                            Attic.Attic();
                             break;
                             //this statement will call to class Attic when press 1.
                     }
