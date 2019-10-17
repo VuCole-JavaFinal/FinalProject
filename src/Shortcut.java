@@ -4,7 +4,7 @@ public class Shortcut {
 
     public static void timeDelay(){
         try{
-            TimeUnit.SECONDS.sleep(8);
+            TimeUnit.SECONDS.sleep(9);
         }
         catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
