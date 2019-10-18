@@ -111,6 +111,7 @@ public class Attic {
         FootStepSoundAttic.sound2();
         //play sound
         System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.");
+            Room2.room2();
     }
 }
 
