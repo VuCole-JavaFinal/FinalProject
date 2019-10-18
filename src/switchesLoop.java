@@ -15,7 +15,7 @@ public class switchesLoop {
             choice = input.nextInt();
             if (choice == 1){
         System.out.println("\nwhich one do you want to turn on ?");
-
+        Room2.switches();
     }
         else if (choice == 2) {
             System.out.println("I refused to check those switches, but there is nothing else to do because you can't see, maybe I should check those");

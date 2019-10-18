@@ -2,9 +2,9 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class FootStepSoundAttic {
-    public static void sound2(){
-    File play = new File ("C:\\Users\\vn317722\\Desktop\\New folder\\FinalProject\\src\\sounds\\foot step 5.wav");
+public class SwitchSound {
+    public static void soundswitch(){
+    File play = new File ("C:\\Users\\vn317722\\Desktop\\New folder\\FinalProject\\src\\sounds\\switch for game.wav");
     PlaySound(play);
 }
     static void PlaySound(File Sound){
@@ -12,7 +12,7 @@ public class FootStepSoundAttic {
             Clip clip= AudioSystem.getClip();
             clip.open(AudioSystem.getAudioInputStream(Sound));
             clip.start();
-            clip.loop(1);   //change loop
+            clip.loop(0);   //change loop
 
             Thread.sleep(clip.getMicrosecondLength()/500); //time that the program end
 
@@ -20,4 +20,5 @@ public class FootStepSoundAttic {
         }
     }
 }
+
 
