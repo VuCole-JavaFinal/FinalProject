@@ -14,7 +14,7 @@ public class Main {
                     Scanner input = new Scanner(System.in);
                     choice = input.nextInt();
                         if (choice == 1) {
-                            System.out.println("spawn in room 4, you get a key after completed a room and move on to the next one.\n" +
+                            System.out.println("spawn in Attic,after completed a room and move on to the next one.\n" +
                                     "   in order to win the game, you have to have a key to the entrance door.\n");
 
                             System.out.println(" BIG WARNNING !!!");
@@ -31,11 +31,11 @@ public class Main {
                             //this statement will end program when press 2
                     }
                         else {
-                            System.out.println("choose again. 1 or 2");
+                            System.out.println("choose again. 1,2 or 3");
                             invalid = true;
                             //invalid input loop
                     }
-                       if (choice == 3){
+                       if (choice == 3){ //call to class incase. this class help the user choose the room they want to play again
                     Incase.incase();
                 }
             }
