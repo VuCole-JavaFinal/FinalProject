@@ -199,11 +199,7 @@ public class chestScene {
             System.out.println(".");
         }
         gotcha.circleGame();
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+        delay.delay4();
         while (choice >= 3) {
 
             System.out.print("\n1 for yes \n2 for no\n");
@@ -217,15 +213,7 @@ public class chestScene {
     }
     public static void Chest11901(){
         System.out.print("you opened the chest with label 11901 \n");
-
-        for (int i = 0 ; i <= 3; i ++){
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                System.err.format("IOException: %s%n", e);
-            }
-            System.out.println(".");
-        }
+        delay.delayl();
         System.out.print("you opened the right one. you a key in the chest. you used the key to open the door and move down to the next floor.\n");
         Room1.room1();
     }
