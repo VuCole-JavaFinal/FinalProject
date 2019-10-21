@@ -20,7 +20,6 @@ public class Main {
                             System.out.println(" BIG WARNNING !!!");
                             System.out.println("-please choose a valid choices. most of the choices being chosen by pressing number."+
                                     " If you type a word, the program will end immediately and you have to play all over again.");
-                            System.out.println("-There are some sounds (remember to turn on the volume), and images in the game. Remember to press the X button to close the image in order to continue the program");
                             System.out.println("\n\n                            BEGIN                                   ");
                             Attic.Attic();
                             break;
@@ -36,6 +35,9 @@ public class Main {
                             invalid = true;
                             //invalid input loop
                     }
+                       if (choice == 3){
+                    Incase.incase();
+                }
             }
     }
 }

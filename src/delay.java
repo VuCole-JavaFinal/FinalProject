@@ -1,6 +1,8 @@
 import java.util.concurrent.TimeUnit;
 
 public class delay {
+
+    //this class for delaying dialogue and picture
     public static void delayl(){
         for (int i = 0; i <= 5 ; i++) {
             try {
@@ -21,6 +23,13 @@ public class delay {
     public static void delay3(){
         try {
             TimeUnit.SECONDS.sleep(3);
+        } catch (InterruptedException e) {
+            System.err.format("IOException: %s%n", e);
+        }
+    }
+    public static void delayforPic(){
+        try {
+            TimeUnit.SECONDS.sleep(7);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
         }
