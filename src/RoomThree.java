@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class RoomThree {
 
-    public static void main(String[] args) {
+    public static void roomThree() {
 
         String choice;
         boolean runGame = true;
@@ -53,6 +53,7 @@ public class RoomThree {
                         System.out.println();
                         Short.timeDelay();
                         Short.pl("But, upon grabbing the key, the floor buckles beneath you, and you fall through.");
+                        Room2.room2();
                         runGame = false;
                     }
                     else if(choice.equalsIgnoreCase("left")){

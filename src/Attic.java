@@ -16,14 +16,14 @@ public class Attic {
         }
         //delay dialog
         System.out.println("\n you wake up in a derelict attic, with a small round window and a door on the floor.\n");
-        System.out.println("\n\"1.Interact with window \n2.Interact with door.");
+        System.out.println("\n1.Interact with window \n2.Interact with door.");
 
             while(choice >= 3) {
                 choice = input.nextInt();
 
                 if (choice == 1) {
-                System.out.println("\nWindow is very thick and difficult to see through, look elsewhere.\n");
-                System.out.println("\n1.Interact with door");
+                System.out.println("The window is very thick and difficult to see through, look elsewhere.\n");
+                System.out.println("1.Interact with door");
                 choice = input.nextInt();
             }
                 if (choice == 1){
@@ -111,7 +111,7 @@ public class Attic {
         FootStepSoundAttic.sound2();
         //play sound
         System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.");
-            Room2.room2();
+            RoomThree.roomThree();
     }
 }
 
