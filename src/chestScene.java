@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class chestScene {
+    //move to this class after the user choose to interact with the chest
     public static void chestStuff() {
         //        variables and arrays
         int choice = 0;
@@ -30,7 +31,6 @@ public class chestScene {
             System.err.format("IOException: %s%n", e);
         }
 
-//        coundownTest.countdown();
         test1();
     }
     public static void test1(){
@@ -64,7 +64,7 @@ public class chestScene {
     }
 
 
-    public static void interactChests(){
+    public static void interactChests(){ // open chest
         int choice = 5;
         Scanner input = new Scanner(System.in);
         int[] chestLabel = {23062, 11001, 92480, 18943, 11901};
@@ -114,6 +114,7 @@ public class chestScene {
                 System.out.print("choose again \n");
         }
     }
+
     public static void KickingChest(){
         for (int i = 0; i <= 4; i++){
             try {
@@ -126,6 +127,7 @@ public class chestScene {
         }
         System.out.print("you kicked on those chest to see something would react. But nothing happened \n");
     }
+
     public static void Chest23062(){
         String choice =null;
         Scanner input = new Scanner(System.in);
@@ -153,13 +155,14 @@ public class chestScene {
                 System.out.print("choose again and please choose a valid one. \n");
         }
     }
-    public static void Chest11001() {
+
+    public static void Chest11001() { //this chest wrong
         int choice;
         Scanner input = new Scanner(System.in);
         System.out.print("you opened the chest with label 11001 \n");
         datepaper.spookyPaper();
     }
-    public static void Chest92480(){
+    public static void Chest92480(){    //this chest wrong
         int choice = 2;
         Scanner input = new Scanner(System.in);
         System.out.print("you opened chest with label 92480\n");
@@ -186,7 +189,7 @@ public class chestScene {
             System.out.print("choose again");
         }
     }
-    public static void Chest18943(){
+    public static void Chest18943(){ // this chest wrong
         int choice = 3;
         Scanner input = new Scanner(System.in);
         System.out.print("you opened the chest label 18943 \n");
@@ -211,7 +214,7 @@ public class chestScene {
             }
         }
     }
-    public static void Chest11901(){
+    public static void Chest11901(){ // this chest is right
         System.out.print("you opened the chest with label 11901 \n");
         delay.delayl();
         System.out.print("you opened the right one. you a key in the chest. you used the key to open the door and move down to the next floor.\n");
