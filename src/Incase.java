@@ -22,7 +22,7 @@ public class Incase {
         }
         if (choice == 2){
             System.out.println("\n\nBEGIN\n\n");
-            RoomThree();
+            RoomThree.roomThree();
         }
         if (choice == 3){
             System.out.println("\n\nBEGIN\n\n");

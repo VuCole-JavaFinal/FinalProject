@@ -112,7 +112,7 @@ public class Attic {
         //play sound
         System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.");
         //after interact the door the user move into room 3
-        RoomThree
+        RoomThree.roomThree();
     }
 }
 
