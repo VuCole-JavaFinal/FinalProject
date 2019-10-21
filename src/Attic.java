@@ -8,12 +8,7 @@ public class Attic {
         for (int i = 0;i< 70; ++i){
             System.out.print("-");
         }
-        //delay the dialog
-        try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+         delay.delay2();
         //delay dialog
         System.out.println("\n you wake up in a derelict attic, with a small round window and a door on the floor.\n");
         System.out.println("\n1.Interact with window \n2.Interact with door.");

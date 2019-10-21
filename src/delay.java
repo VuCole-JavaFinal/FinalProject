@@ -2,14 +2,12 @@ import java.util.concurrent.TimeUnit;
 
 public class delay {
     public static void delayl(){
-        for (int i = 0; i <= 5 ; i++) {
-            try {
-                TimeUnit.SECONDS.sleep(1);
+        try {
+            TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 System.err.format("IOException: %s%n", e);
             }
             System.out.println(".");
-        }
     }
     public static void delay2(){
             try {
@@ -23,6 +21,23 @@ public class delay {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
+        }
+    }
+    public static void delay4(){
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            System.err.format("IOException: %s%n", e);
+        }
+    }
+    public static void delay5(){
+        for(int i = 0; i < 5; ++i) {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                System.err.format("IOException: %s%n", e);
+            }
+            System.out.println(".");
         }
     }
 }
