@@ -2,7 +2,7 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class datepaper {
+public class datepaper { // this class execute after choosing chest 11001
     public static void spookyPaper() {
         int choice =3;
         Scanner input = new Scanner(System.in);

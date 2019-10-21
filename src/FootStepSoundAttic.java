@@ -2,7 +2,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
 
-public class FootStepSoundAttic {
+public class FootStepSoundAttic { // sound for the attic
     public static void sound2(){
     File play = new File ("C:\\Users\\vn317722\\Desktop\\New folder\\FinalProject\\src\\sounds\\foot step 5.wav");
     PlaySound(play);
