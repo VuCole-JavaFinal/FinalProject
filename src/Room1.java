@@ -47,8 +47,8 @@ public class Room1 {
 
     public static void AntonioTheAnt(){
 
-        System.out.println("\nThis room is the biggest room compared to the others, with a big door on the front. \n"+
-                "Soon, I heard some weird noises behind my back.");
+        System.out.println("\nThe room you enter is the largest of them all, and a massive door occupies the front. Soon, you hear \n" +
+                    "strange noises coming from behind you.");
 
         //delay the conversation
 
@@ -60,7 +60,8 @@ public class Room1 {
 
         //end delay the conversation
 
-        System.out.println("\nI turned around to see what it is, and I was shocked when i see a big ant sit on the floor and leaned against the wall.");
+        System.out.println("\n You turn around to see what it is, and you're shocked to find an\n" +
+                    "ant-like creature leaning against the wall.");
         delay.delayforPic(); //show pics and delay 7 for next dialogue
         PicOfAnt.image1();
 
@@ -70,7 +71,8 @@ public class Room1 {
             System.err.format("IOException: %s%n", e);
         }
 
-        System.out.print("\nThe ant didn’t move, it makes weird noises like it’s injured. I take all of my courage and take a closer look, I saw it’s eyes are bleeding.\n\n");
+        System.out.print("\nThe ant doesn't move, but it makes faint noises, giving you the impression that it is hurt. You muster\n" +
+                    "your courage and take a closer look, and you see that its eyes are bleeding.\n\n");
 
         try {
             TimeUnit.SECONDS.sleep(6);
@@ -93,7 +95,7 @@ public class Room1 {
 
         System.out.print("???: Hello ?\n");
         delay.delay3();
-        System.out.print("\n\''me:!!!!??\''"+" I scared and ran far away from the ant.\n\n");
+        System.out.print("\n\''me:!!!!??\''" + "Its human-like response scares you and you haul away from the ant.\n\n");
         delay.delay3();
 
         // choose 3 question. after choosing all 3, call next method
