@@ -8,22 +8,17 @@ public class Attic {
         for (int i = 0;i< 70; ++i){
             System.out.print("-");
         }
-        //delay the dialog
-        try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+         delay.delay2();
         //delay dialog
         System.out.println("\n you wake up in a derelict attic, with a small round window and a door on the floor.\n");
-        System.out.println("\n\"1.Interact with window \n2.Interact with door.");
+        System.out.println("\n1.Interact with window \n2.Interact with door.");
 
             while(choice >= 3) {
                 choice = input.nextInt();
 
                 if (choice == 1) {
-                System.out.println("\nWindow is very thick and difficult to see through, look elsewhere.\n");
-                System.out.println("\n1.Interact with door");
+                System.out.println("The window is very thick and difficult to see through, look elsewhere.\n");
+                System.out.println("1.Interact with door");
                 choice = input.nextInt();
             }
                 if (choice == 1){
@@ -113,6 +108,7 @@ public class Attic {
         System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.");
         //after interact the door the user move into room 3
         RoomThree.roomThree();
+            RoomThree.roomThree();
     }
 }
 
