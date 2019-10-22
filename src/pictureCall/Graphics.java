@@ -1,3 +1,5 @@
+package pictureCall;
+
 public class Graphics {
 
     public static void deathScreen(){

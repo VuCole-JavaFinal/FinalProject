@@ -1,3 +1,7 @@
+package actions;
+
+import actions.ChestScene;
+
 import java.util.Date;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -41,11 +45,11 @@ public class datepaper { // this class execute after choosing chest 11001
                     System.err.format("IOException: %s%n", e);
                 }
                 System.out.println("ok lets go back");
-                chestScene.interactChests();
+                ChestScene.interactChests();
                 break;
             } else if (choice == 2) {
                 System.out.print("you threw the paper back in the chest and keep doing your work\n");
-                chestScene.interactChests();
+                ChestScene.interactChests();
                 break;
             }
         }

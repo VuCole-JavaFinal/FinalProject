@@ -1,41 +1,32 @@
-import java.util.Date;
+package actions;
+
+import sounds.Kick;
+import rooms.RoomOne;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class chestScene {
+public class ChestScene {
     //move to this class after the user choose to interact with the chest
     public static void chestStuff() {
         //        variables and arrays
-        int choice = 0;
-        boolean invalid = true;
-        Scanner input = new Scanner(System.in);
         int[] chestLabel = {23062, 11001, 92480, 18943, 11901};
-        String[] questions = {"1.Interact with those chest", "2.Crying in a corner", "3.Kick on those chests"};
-        System.out.print("\nthere are 5 chests, each of them labeled a number:\n");
-        //----------------------------------------------
+        System.out.print("\nThere are 5 chests, each of them labeled with different numbers:\n");
 
         for (int i = 0; i < chestLabel.length; i++) {
             {
                 System.out.print("chest labeled " + chestLabel[i] + "\n");
             }
         }
-        try {
-            TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+        delay.delay5();
         System.out.print(" \nWhat are you going to do ?\n");
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            System.err.format("IOException: %s%n", e);
-        }
+        delay.delay4();
 
         test1();
     }
     public static void test1(){
         int choice;
-        String[] questions = {"1.Interact with those chest", "2.Crying in a corner", "3.Kick on those chests"};
+        String[] questions = {"1.Interact with those chest", "2.Crying in a corner", "3.sounds.Kick on those chests"};
         Scanner input = new Scanner(System.in);
         boolean invalid = true;
         System.out.print("\n");
@@ -218,7 +209,7 @@ public class chestScene {
         System.out.print("you opened the chest with label 11901 \n");
         delay.delayl();
         System.out.print("you opened the right one. you a key in the chest. you used the key to open the door and move down to the next floor.\n");
-        Room1.room1();
+        RoomOne.room1();
     }
 }
 

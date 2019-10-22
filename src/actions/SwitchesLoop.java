@@ -1,6 +1,10 @@
+package actions;
+
+import rooms.RoomTwo;
+
 import java.util.Scanner;
 
-public class switchesLoop {
+public class SwitchesLoop {
     public static void switchesloop(){
     String choices [] = {"look around","Switch 1","Switch 2","Switch 3","yes","no"};
     int choice = 2;
@@ -15,7 +19,7 @@ public class switchesLoop {
             choice = input.nextInt();
             if (choice == 1){
         System.out.println("\nwhich one do you want to turn on ?");
-        Room2.switches();
+        RoomTwo.switches();
     }
         else if (choice == 2) {
             System.out.println("I refused to check those switches, but there is nothing else to do because you can't see, maybe I should check those");

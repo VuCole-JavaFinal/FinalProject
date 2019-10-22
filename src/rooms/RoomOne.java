@@ -1,11 +1,15 @@
+package rooms;
+
+import actions.delay;
+import pictureCall.PicsOfAnt;
+import pictureCall.Fox;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class Room1 {
+public class RoomOne {
     public static void room1(){
-        //random falling down
-
+        //initiates the player falling for a certain amount of time
         int randomFall;
         int minute = 0;
         Random rand = new Random();
@@ -50,7 +54,7 @@ public class Room1 {
         System.out.println("\nThis room is the biggest room compared to the others, with a big door on the front. \n"+
                 "Soon, I heard some weird noises behind my back.");
 
-        //delay the conversation
+        //actions.delay the conversation
 
         try {
             TimeUnit.SECONDS.sleep(6);
@@ -58,11 +62,11 @@ public class Room1 {
             System.err.format("IOException: %s%n", e);
         }
 
-        //end delay the conversation
+        //end actions.delay the conversation
 
         System.out.println("\nI turned around to see what it is, and I was shocked when i see a big ant sit on the floor and leaned against the wall.");
-        delay.delayforPic(); //show pics and delay 7 for next dialogue
-        PicOfAnt.image1();
+        delay.delayforPic(); //show pics and actions.delay 7 for next dialogue
+        PicsOfAnt.image1();
 
         try {
             TimeUnit.SECONDS.sleep(6);
@@ -193,7 +197,7 @@ public class Room1 {
                 break;
             }
         }
-        if (question1 && question2 && question3 == true){
+        if (question1 && question2 && question3){
             Dialogue2();
         }
         //end of choosing qustion
@@ -309,7 +313,7 @@ public class Room1 {
 
     private static void theBox() {
         String[] choices = {"check the top","check under","check side"};
-        int choice = 3 ;
+        int choice;
         Scanner input = new Scanner(System.in);
         //variables
 
@@ -422,7 +426,7 @@ public class Room1 {
 
         if (choice == 1){
             System.out.println("\nMe:there you go");
-            PicOfAntWithKit.image2();
+            PicsOfAnt.image2();
             delay.delayforPic();
             System.out.println("\nAntonio: Thank you, here is your key to my house");
             delay.delay3();

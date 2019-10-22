@@ -1,9 +1,13 @@
-import javax.swing.plaf.synth.SynthLookAndFeel;
-import java.lang.reflect.GenericArrayType;
+package rooms;
+import sounds.SwitchSound;
+import actions.delay;
+import actions.SwitchesLoop;
+import pictureCall.Graphics;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class Room2 {
+public class RoomTwo {
     public static void room2() {
         //variables and arrays
         String choices[] = {"look around", "Switch 1", "Switch 2", "Switch 3", "yes", "no"};
@@ -51,11 +55,10 @@ public class Room2 {
             } else
                 System.out.println("choose again");
         }
-        //==================================
 
         if (choice == 2) {
             System.out.println("\"I refused to check those switches, but there is nothing else to do because you can't see, maybe I should check those\"");
-            switchesLoop.switchesloop();
+            SwitchesLoop.switchesloop();
         }
     }
     public static void Switch1(){
@@ -129,7 +132,7 @@ public class Room2 {
             System.out.println("\nthe paper said:\n" +
                     "\"more than 2,000 and below 3,000 person died in that day.\""+
                     "\nyou have no idea what that mean, so you keep it in the pocket");
-            room2Part2.room2Chestscene();
+            room2Part2.roomTwoChestScene();
         }
     }
     public static void findout(){

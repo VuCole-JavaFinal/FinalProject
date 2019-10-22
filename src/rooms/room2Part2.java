@@ -1,16 +1,18 @@
+package rooms;
+import actions.ChestScene;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class room2Part2 {
-    public static void room2Chestscene(){
+    public static void roomTwoChestScene(){
     int choice;
     Scanner input = new Scanner(System.in);
     System.out.println(" \n\n Suddenly, a creepy, bloody face appears; without a body and chase you, you ran in fear, scare and afraid of death. \n" +"you ran to the end of the way and there is no other way to go. but that thing disappeared... \n");
     try {
         TimeUnit.SECONDS.sleep(10);
-        // delay 0.5 second
+        // actions.delay 0.5 second
 //        TimeUnit.MICROSECONDS.sleep(10000);
-        // delay 1 minute
+        // actions.delay 1 minute
         //TimeUnit.MINUTES.sleep(1);
     } catch (InterruptedException e) {
         System.err.format("IOException: %s%n", e);
@@ -21,7 +23,7 @@ public class room2Part2 {
     choice = input.nextInt();
     switch (choice) {
         case 1:
-                chestScene.chestStuff();
+                ChestScene.chestStuff();
             break;
     }
     while (choice !=1){
@@ -29,7 +31,7 @@ public class room2Part2 {
         choice = input.nextInt();
         switch (choice) {
             case 1:
-                chestScene.chestStuff();
+                ChestScene.chestStuff();
                 break;
         }
     }

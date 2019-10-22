@@ -1,6 +1,7 @@
-//The room you enter immediately after you leave the attic.
+package rooms;//The room you enter immediately after you leave the attic.
 import java.util.Scanner;
-
+import actions.Short;
+import pictureCall.Graphics;
 public class RoomThree {
 
     public static void roomThree() {
@@ -53,7 +54,7 @@ public class RoomThree {
                         System.out.println();
                         Short.timeDelay();
                         Short.pl("But, upon grabbing the key, the floor buckles beneath you, and you fall through.");
-                        Room2.room2();
+                        RoomTwo.room2();
                         runGame = false;
                     }
                     else if(choice.equalsIgnoreCase("left")){
@@ -100,7 +101,7 @@ public class RoomThree {
                 choice = input.nextLine();
                 System.out.println();
                 if (choice.equalsIgnoreCase("no")) {
-                    runGame = false;
+                    runGame = false; //ends the game
                 }
             }
         }

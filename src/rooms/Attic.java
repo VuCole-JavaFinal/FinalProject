@@ -1,5 +1,11 @@
+package rooms;
+
+import actions.delay;
+import rooms.RoomThree;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import sounds.FootStepSoundAttic;
 
 public class Attic {
     public static void Attic(){
@@ -9,7 +15,7 @@ public class Attic {
             System.out.print("-");
         }
          delay.delay2();
-        //delay dialog
+        //actions.delay dialog
         System.out.println("\n you wake up in a derelict attic, with a small round window and a door on the floor.\n");
         System.out.println("\n1.Interact with window \n2.Interact with door.");
 
@@ -21,46 +27,46 @@ public class Attic {
                 System.out.println("1.Interact with door");
                 choice = input.nextInt();
             }
-                if (choice == 1){
+            if (choice == 1){
                     AtticDoor();
                     break;
                 }
-            if (choice == 2) {
+            else if(choice != 1) {
                 AtticDoor();
                 break;
             }
-                System.out.println("choose again");
+                System.out.println("Choose again...");
             }
     }
     public static void AtticDoor(){
         Scanner input = new Scanner(System.in);
-        int choice = 3;
-        System.out.println("Door is stuck shut as if it had been glued shut.\nThere must be some way you could open it, maybe try looking around a bit.\n");
+        int choice;
+        System.out.println("Door is stuck as if it had been glued shut.\nThere must be some way you could open it, maybe try looking around a bit.\n");
             System.out.println("1.Look Around \n");
             choice = input.nextInt();
-            if (choice == 1) {
+            if(choice == 1) {
                 System.out.println("You see some cardboard boxes in the corner, and you notice the heavily stained mattress you woke up on. \n");
                 System.out.println("1.Interact with boxes \n2.Interact with mattress"); // choose 1 will interact boxes or 2 interact mattress
                 choice = input.nextInt();
-                if (choice == 1) {
+                if(choice == 1)
                     boxesInteract();
             }
-            }  if (choice == 2) {
+            else if(choice == 2) {
                 System.out.println("There's nothing special about the mattress, other than its horrible smell\n");
                 System.out.println("1.Interact with boxes");
                 choice = input.nextInt();
-                if (choice == 1) {
+                if (choice == 1)
                     boxesInteract(); //box interact after pressing 1
-                } else
+                else
                     System.out.println("choose again");
             }
     }
     public static void boxesInteract(){
         String choices [] = {"1.Interact with mattress","2.Interact with door"};
-        int choice = 2 ;
+        int choice;
         Scanner input = new Scanner(System.in);
-        System.out.println("\n In the boxes you find nothing interesting, besides a small toolkit, with a small screwdriver in it. That should suffice");
-        System.out.println("\n 1.Grab the screwdriver");
+        System.out.println("\nIn the boxes you find nothing interesting, besides a small toolkit, with a small screwdriver in it. That should suffice.");
+        System.out.println("\n1.Grab the screwdriver");
             choice = input.nextInt();
             if (choice == 1) {
                 System.out.println("You grab the screwdriver, and you head towards the door. You COULD also go check to see if anything is in the mattress.");
@@ -80,12 +86,12 @@ public class Attic {
                 }
             }
             else
-                System.out.println("choose again and please choose the right number");
+                System.out.println("choose again and, please, choose the right number.");
         }
     public static void interactMattress(){
         int choice;
         Scanner input = new Scanner(System.in);
-        System.out.println("you stab open the mattress, and you find a bunch of old, stained stuffing.\n Gross!.");
+        System.out.println("you stab open the mattress, and you find a bunch of old, stained stuffing.\nGross.");
 
         System.out.println(" \n1.interact with door"); //door interact after pressing 1
         choice = input.nextInt();
@@ -94,21 +100,23 @@ public class Attic {
         }
 
     }
+    //Interact with the door after getting the screwdriver.
+    //The gateway from the attic to room 3.
     public static void interactDoor(){
         System.out.println("you slowly begin to stab at the glue, but half way through you hear the sound of footsteps upon creaky hardwood.\nYou are not alone.");
-        //delay
+        //actions.delay
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             System.err.format("IOException: %s%n", e);
         }
-        //delay
+        //actions.delay
         FootStepSoundAttic.sound2();
         //play sound
-        System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.");
-        //after interact the door the user move into room 3
+        System.out.println("\nYou stop picking at the glue for a second, and the footsteps begin to fade. You finish the job, and the attic door creaks open.\n");
+        //after interacting with the door the user move into room 3
         RoomThree.roomThree();
-            RoomThree.roomThree();
+
     }
 }
 

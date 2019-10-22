@@ -1,3 +1,5 @@
+package pictureCall;
+
 import javax.swing.*;
 import java.awt.*;
 
