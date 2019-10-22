@@ -7,7 +7,7 @@ import actions.Incase;
 
 // this rooms.Main class ask user play the game or not
 public class Main {
-    public static void main(String[] agrs) {
+    public static void main(String[] args) {
         System.out.println("1.Play \n2.Exit\n3.Play the room you want");
         // press 1 to play, press 2 to exit, and enter 3 to pick from the 4 rooms
         boolean invalid = true;
