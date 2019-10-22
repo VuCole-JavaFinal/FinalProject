@@ -9,6 +9,7 @@ This is the flowchart for the project.
 there will be three choices for you to choose before starting the game.
 
 1.Play.
+
 -The game will start after you entered number 1.
 
 --------
@@ -19,7 +20,8 @@ there will be three choices for you to choose before starting the game.
 --------
 3.Play the room you want.
 
-  -after you entered number 3, you will choose the room you want to play again.
-  -This is for just in case when the program accidently end.
-  
+ -After you entered number 3, you will choose the room you want to play again.
+ This is for just in case when the program accidently end.
+
 --------
+
