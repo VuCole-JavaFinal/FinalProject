@@ -1,3 +1,4 @@
 # FinalProject
 ## UML
-![GitHub Logo](VC Final Project Java.PNG)
+
+<img src="VC Final Project Java.png" height = "400" width ="400">
