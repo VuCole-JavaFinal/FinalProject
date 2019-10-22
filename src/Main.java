@@ -1,11 +1,9 @@
-package rooms;
-
 import rooms.Attic;
 
 import java.util.Scanner;
 import actions.Incase;
 
-// this rooms.Main class ask user play the game or not
+// this Main class ask user play the game or not
 public class Main {
     public static void main(String[] args) {
         System.out.println("1.Play \n2.Exit\n3.Play the room you want");
