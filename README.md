@@ -24,4 +24,5 @@ there will be three choices for you to choose before starting the game.
  This is for just in case when the program accidently end.
 
 --------
-
+## download repository
+download repository from here 
