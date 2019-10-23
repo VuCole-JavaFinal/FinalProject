@@ -25,3 +25,4 @@ there will be three choices for you to choose before starting the game.
 
 --------
 ## Video
+<a href ="https://www.youtube.com/watch?v=Cu0G3T_lhkc&feature=youtu.be">The final video displaying the game is here.</a>
