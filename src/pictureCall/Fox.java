@@ -2,7 +2,7 @@ package pictureCall;
 
 import javax.swing.*;
 import java.awt.*;
-
+//displays different fox pictures.
 public class Fox { // pictures
     public static void image1(){
         JFrame f = new JFrame(); //creates jframe f

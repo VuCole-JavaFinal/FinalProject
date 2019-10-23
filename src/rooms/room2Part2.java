@@ -1,5 +1,7 @@
 package rooms;
 import actions.ChestScene;
+import actions.delay;
+
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
@@ -7,18 +9,12 @@ public class room2Part2 {
     public static void roomTwoChestScene(){
     int choice;
     Scanner input = new Scanner(System.in);
-    System.out.println(" \n\n Suddenly, a creepy, bloody face appears; without a body and chase you, you ran in fear, scare and afraid of death. \n" +"you ran to the end of the way and there is no other way to go. but that thing disappeared... \n");
-    try {
-        TimeUnit.SECONDS.sleep(10);
-        // actions.delay 0.5 second
-//        TimeUnit.MICROSECONDS.sleep(10000);
-        // actions.delay 1 minute
-        //TimeUnit.MINUTES.sleep(1);
-    } catch (InterruptedException e) {
-        System.err.format("IOException: %s%n", e);
-    }
-    System.out.print(" You calm your self and sit down, but you feel that something hard behind your back, you turned around to see what it is, and you saw 5 small chests on the ground\n");
-    System.out.print("\n1.take a look at those chests\n");
+    System.out.println(" \nSuddenly, a creepy, bloody face appears. The head appears to be attached to no body, and you run in fear of what might come if you stay.\n"
+            +"you run to the end of a pathway and hit a dead end. Fortunately, the disembodied head disappeared... \n");
+    delay.delay10();
+    System.out.print("You calm yourself and sit down, but you feel that you've rested upon something cold and solid.\n" +
+            "You turn around to see what it is, and you see 5 small chests on the ground.\n");
+    System.out.print("\n1.Inspect the chests.\n");
 
     choice = input.nextInt();
     switch (choice) {
@@ -27,7 +23,8 @@ public class room2Part2 {
             break;
     }
     while (choice !=1){
-        System.out.print("1.take a look at those chests\n");
+        System.out.println("You only have the one option, bud.\n");
+        System.out.print("1.Inspect the chests.\n");
         choice = input.nextInt();
         switch (choice) {
             case 1:

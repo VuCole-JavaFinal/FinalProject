@@ -14,7 +14,7 @@ public class Incase {
         //variables
         int choice;
         Scanner input = new Scanner(System.in);
-        String[] choices = {"go back to the rooms.Attic","go back to room 3","go back to room 2","go back to room 1"};
+        String[] choices = {"go back to the attic","go back to room 3","go back to room 2","go back to room 1"};
 
         //print out options, and then take you to the designated room.
         System.out.println("1." + choices[0]); // attic
@@ -22,6 +22,7 @@ public class Incase {
         System.out.println("3." + choices[2]); // room 2
         System.out.println("4." + choices[3]); // room 1
 
+        //Select which room you want to go to, and then start from there.
         choice = input.nextInt();
         if (choice == 1 ){
             System.out.println("\n\nBEGIN\n\n");

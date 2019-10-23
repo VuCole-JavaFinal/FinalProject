@@ -11,22 +11,22 @@ public class SwitchesLoop {
     Scanner input = new Scanner(System.in);
     //variables and arrays
 
-        System.out.println("\nInteract with these switches ?\n");
+        System.out.println("\nInteract with the switches?\n");
         System.out.println("1." + choices[4]);
         System.out.println("2." + choices[5]);
 
         while (choice == 2){ //this will loop until the user input is 1
             choice = input.nextInt();
             if (choice == 1){
-        System.out.println("\nwhich one do you want to turn on ?");
+        System.out.println("\nWhich one do you want to turn on?");
         RoomTwo.switches();
     }
         else if (choice == 2) {
-            System.out.println("I refused to check those switches, but there is nothing else to do because you can't see, maybe I should check those");
+            System.out.println("You refuse to check the switches, but there is nothing else to do, so there isn't much use in not checking them.");
 
         }
         else
-            System.out.println("choose again");
+            System.out.println("Choose again:");
         }
     }
 }

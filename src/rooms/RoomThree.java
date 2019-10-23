@@ -1,4 +1,5 @@
-package rooms;//The room you enter immediately after you leave the attic.
+//The room you enter immediately after you leave the attic. It consists of a few choices to make.
+package rooms;
 import java.util.Scanner;
 import actions.Short;
 import pictureCall.Graphics;
@@ -30,7 +31,7 @@ public class RoomThree {
                         "robe, chopping some sort of meat. The man is heavily stained with blood.");
                 System.out.println();
                 Short.timeDelay();
-                Short.pl("You don't dare to talk to the man; you know it will end horribly on your part. But, you also\n" +
+                Short.pl("You don't dare to talk to the man; you know it will end horribly on your part. But, you\n" +
                         "see a door to the left in the back of the room, it could be a possible exit. On the other hand, you see some\n" +
                         "knives laying on a table over to your right. You could try to use them to remove chances of getting caught\n" +
                         "and meeting your demise.\n" +
@@ -88,7 +89,6 @@ public class RoomThree {
                     if(choice.equalsIgnoreCase("no"))
                         runGame = false;
                 }
-
             } else if (choice.equalsIgnoreCase("no")) {
                 Short.pl("You decide that curling up into a ball in the corner and crying is an idea that suits you\n" +
                         "better than facing your fear. You clamber upon a pile of rotting meat, and begin to bawl\n" +
@@ -99,7 +99,7 @@ public class RoomThree {
                 System.out.println();
                 Short.pl("Try again?");
                 choice = input.nextLine();
-                System.out.println();
+                Short.pl("\n");
                 if (choice.equalsIgnoreCase("no")) {
                     runGame = false; //ends the game
                 }

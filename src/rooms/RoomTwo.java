@@ -10,38 +10,38 @@ import java.util.concurrent.TimeUnit;
 public class RoomTwo {
     public static void room2() {
         //variables and arrays
-        String choices[] = {"look around", "Switch 1", "Switch 2", "Switch 3", "yes", "no"};
+        String choices[] = {"Look around", "Switch 1", "Switch 2", "Switch 3", "yes", "no"};
         int choice = 2;
         Scanner input = new Scanner(System.in);
         //variables and arrays
 
-        System.out.println("\nyou went from floor 3 to here. in a dark room and surrounded by the tombs \n");
+        System.out.println("\nAs you crash through the floor, you stumble into a room, surrounded by tombs.\n");
 
         while (choice >= 2) {
             System.out.println("1." + choices[0]); // choices array [0] look around
 
             choice = input.nextInt();
             if (choice == 1) {
-                System.out.println("\nthe room is too dark, you put your hand against the wall and follow. then, you found 3 switches, one of them may turns on the light.\n");
+                System.out.println("\nThe room is too dark, so you run your hand against the wall. Then, you find 3 switches, one of them may turn on the light.\n");
                 switches();
-            } else System.out.println("choose again");
+            } else System.out.println("Choose again:");
         }
     }
     public static void switches() {
-        String choices[] = {"look around", "Switch 1", "Switch 2", "Switch 3", "yes", "no"};
+        String choices[] = {"Look around", "Switch 1", "Switch 2", "Switch 3", "Yes", "No"};
         int choice = 2;
         Scanner input = new Scanner(System.in);
-        System.out.println("\nInteract with these switches ?\n");
+        System.out.println("Interact with these switches?\n");
         System.out.println("1." + choices[4]);
         System.out.println("2." + choices[5]);
         choice = input.nextInt();
 
 
         if (choice == 1) {
-            System.out.println("\nwhich one do you want to turn on ?");
+            System.out.println("\nWhich one do you want to turn on?");
             System.out.println("1." + choices[1]); //switch 1
             System.out.println("2." + choices[2]); //switch 2
-            System.out.println("3." + choices[3]); // switch 3
+            System.out.println("3." + choices[3]); //switch 3
             choice = input.nextInt();
             if (choice == 1) {
                 SwitchSound.soundswitch();
@@ -53,20 +53,20 @@ public class RoomTwo {
                 SwitchSound.soundswitch();
                 Switch3();
             } else
-                System.out.println("choose again");
+                System.out.println("Choose again:");
         }
 
         if (choice == 2) {
-            System.out.println("\"I refused to check those switches, but there is nothing else to do because you can't see, maybe I should check those\"");
+            System.out.println("You refused to check the switches, but there is nothing else to do, so you ought to just do it.");
             SwitchesLoop.switchesloop();
         }
     }
     public static void Switch1(){
         int choice;
         Scanner input = new Scanner(System.in);
-        String[] choices = {"ignore it","find out what it is"};
+        String[] choices = {"Ignore it","Find the source"};
         delay.delayl();
-            System.out.println("the light turns on. \nA seconds later, you hear a creepy smile, comes from a tomb, but you don't know which one");
+            System.out.println("The light turns on.\nA few seconds later, you hear the sound of someone smiling coming from a tomb, but you can't tell which one.");
              System.out.println("1." + choices[0]);
              System.out.println("2." + choices[1]);
         choice = input.nextInt();
@@ -81,9 +81,10 @@ public class RoomTwo {
         int choice;
         Scanner input = new Scanner(System.in);
         delay.delayl();
-    System.out.println("your stomach feels weird after pressing the switch, like something is moving inside your stomach... you died");
+    System.out.println("Your stomach feels weird after flipping the switch, like something is moving inside your stomach.");
+    delay.delay2();
     Graphics.deathScreen();
-    System.out.println("try again ?");
+    System.out.println("try again?\n 1. Yes\n2. No");
     choice = input.nextInt();
     if (choice == 1){
         switches();
@@ -93,32 +94,26 @@ public class RoomTwo {
     }
     }
     public static void Switch3() {
-        for (int i = 0 ; i < 5 ; i++){
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                System.err.format("IOException: %s%n", e);
-            }
-            System.out.println(".");
-        }
+        delay.delay5();
         System.out.println("nothing happened");
         switches();
     }
     public static void ignore(){
-        String[] choices = {"take","no"};
-        System.out.println("after the light on.you see there are a lot of tombs, most of them look old, crackly."+
-                "  Like they have been here a few hundred years...go  around the room, tripped on a skull on the ground, see paper, take it ?");
+        String[] choices = {"Take it","Don't take it"};
+        System.out.println("After the lights turn on, you can see many different tombs, most of them look old and crackly,\n"+
+                "as if they have been here a few hundred years. You walj around the room, trip on a skull on the ground, and see paper within. Do you take it?");
         int choice;
         Scanner input = new Scanner(System.in);
         System.out.println("1." + choices[0]);
         System.out.println("2." + choices[1]);
         choice = input.nextInt();
         if (choice == 1){
-            System.out.println("you reach your hand into the skull. a spider appear and bit you. your limbs turn black. you turn into a spider");
-                Graphics.deathScreen();
-                System.out.println("try again ?");
-
+            System.out.println("You reach your hand into the skull. A spider crawls out and bites you. your limbs turn black, and you collapse on the floor, never to awaken again.");
+            delay.delay2();
+            Graphics.deathScreen();
+            System.out.println("try again ?\n 1. Yes\n2. No");
             choice = input.nextInt();
+
             if (choice == 1){
                 ignore();
             }
@@ -127,22 +122,26 @@ public class RoomTwo {
             }
         }
         else if (choice == 2 ){
-            System.out.println("you refused to take the paper because you feel that something is gonna happen. you were right, a poisonous spider just crawl out and almost bit you. you took the paper because it safe");
+            System.out.println("You refuse to take the paper because you feel that nothing good could come from it. You were right; a poisonous spider crawls out and almost bites you. Now, you\n" +
+                    "take the paper because it appears to be safe now.");
             delay.delay2();
-            System.out.println("\nthe paper said:\n" +
-                    "\"more than 2,000 and below 3,000 person died in that day.\""+
-                    "\nyou have no idea what that mean, so you keep it in the pocket");
+            System.out.println("\nThe paper says:\n" +
+                    "\"More than 2,000 people died that day.\""+
+                    "\nYou have no idea what that means, and, frankly, you don't care, so you jam it into your pocket for later.");
             room2Part2.roomTwoChestScene();
         }
     }
     public static void findout(){
         int choice;
         Scanner input = new Scanner(System.in);
-        System.out.println("you find out where the sound came from in every tombs, but there was nothing, suddenly, something taped on your shoulder, you turn around and...(whatever that happen) you died. ");
+        System.out.println("You go to find out where the sound came from in each of the tombstones, but there was nothing.\n" +
+                "Suddenly, something taps on your shoulder. You slowly turn around and...\n" +
+                "The action is too quick to be perceived, and your life fades away.");
+        delay.delay2();
         Graphics.deathScreen();
-        System.out.println("try again ? ");
-        System.out.println("1.yes");
-        System.out.println("2.no");
+        System.out.println("Try again?");
+        System.out.println("1.Yes");
+        System.out.println("2.No");
         choice = input.nextInt();
         if (choice == 1){
             switches();
@@ -152,4 +151,3 @@ public class RoomTwo {
         }
     }
 }
-

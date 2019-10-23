@@ -2,7 +2,7 @@ package pictureCall;
 
 import javax.swing.*;
 import java.awt.*;
-
+//displays the different pictures of the ant.
 public class PicsOfAnt {
         public static void image1(){
             JFrame f = new JFrame(); //creates jframe f

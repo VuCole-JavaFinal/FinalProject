@@ -34,14 +34,14 @@ public class Graphics {
         System.out.println("  |    |     |  | |  |   |  | |  |");
         System.out.println("  |    |     |  |_|  |   |  |_|  |");
         System.out.println("  |____|     |_______|   |_______|");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+        System.out.println(" _   _   _     __     ________");
+        System.out.println("| | | | | |   |  |   |   __   |");
+        System.out.println("| | | | | |   |  |   |  |  |  |");
+        System.out.println("| | | | | |   |  |   |  |  |  |");
+        System.out.println("| | | | | |   |  |   |  |  |  |");
+        System.out.println("| | | | | |   |  |   |  |  |  |");
+        System.out.println("| | | | | |   |  |   |  |  |  |");
+        System.out.println("| |_| |_| |   |  |   |  |  |  |");
+        System.out.println("|_________|   |__|   |__|  |__|");
     }
 }

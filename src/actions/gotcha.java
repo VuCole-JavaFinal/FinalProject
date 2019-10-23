@@ -23,7 +23,7 @@ public class gotcha {
         f.setLocationRelativeTo(null);    //unslash this put the picture in the center of the screen
         f.setVisible(true); //makes the jframe visible
         f.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-        System.out.print("Got cha\nTry again?");
+        System.out.print("Gotcha haha\nTry again?");
 
     }
 }

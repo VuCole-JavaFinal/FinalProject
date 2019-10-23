@@ -52,7 +52,14 @@ public class delay {
                 System.err.format("IOException: %s%n", e);
                 }
                 System.out.println(".");
-            }
         }
+    }
+    public static void delay10(){
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            System.err.format("IOException: %s%n", e);
+        }
+    }
 }
 
